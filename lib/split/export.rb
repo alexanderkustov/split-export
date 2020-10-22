@@ -7,7 +7,7 @@ module Split
     extend self
 
     def round(number, precision = 2)
-      BigDecimal.new(number.to_s).round(precision).to_f
+      BigDecimal(number.to_s).round(precision).to_f
     rescue ArgumentError
       0.0
     end
